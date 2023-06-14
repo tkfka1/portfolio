@@ -1,6 +1,13 @@
+import Hello from "./Hello";
+
 export default function App() {
   return (
-    <p>hello</p>
+    <div>
+      <Hello />
+      <Hello />
+      <Hello />
+      <Hello />
+    </div>
   );
 }
 
