@@ -8,6 +8,6 @@ const rootElement = document.getElementById('root');
 createRoot(rootElement).render(
     <>
         <GlobalStyles />
-        <App />,
+        <App />, 
     </>
 );
