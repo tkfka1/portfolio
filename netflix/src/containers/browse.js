@@ -14,8 +14,8 @@ export function BrowseContainer({ slides }) {
   const [searchTerm, setSearchTerm] = useState('');
   const [slideRows, setSlideRows] = useState([]);
 
-  const { firebase } = useContext(FirebaseContext);
-  const user = firebase.auth().currentUser || {};
+  const { auth } = useContext(FirebaseContext);
+  const user = auth.currentUser || {};
 
   useEffect(() => {
     setTimeout(() => {
@@ -42,7 +42,7 @@ export function BrowseContainer({ slides }) {
     <>
       {loading ? <Loading src={user.photoURL} /> : <Loading.ReleaseBody />}
 
-      <Header src="joker1" dontShowOnSmallViewPort>
+      <Header src="joker1" dontshowonsmallviewport>
         <Header.Frame>
           <Header.Group>
             <Header.Logo to={ROUTES.HOME} src={logo} alt="Netflix" />
@@ -63,7 +63,7 @@ export function BrowseContainer({ slides }) {
                   <Header.TextLink>{user.displayName}</Header.TextLink>
                 </Header.Group>
                 <Header.Group>
-                  <Header.TextLink onClick={() => firebase.auth().signOut()}>Sign out</Header.TextLink>
+                  <Header.TextLink onClick={() => auth.signOut()}>Sign out</Header.TextLink>
                 </Header.Group>
               </Header.Dropdown>
             </Header.Profile>

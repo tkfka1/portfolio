@@ -8,9 +8,13 @@ export const Background = styled.div`
     no-repeat;
 
   @media (max-width: 1100px) {
-    ${({ dontShowOnSmallViewPort }) => dontShowOnSmallViewPort && `background: none;`}
+    ${({ dontshowonsmallviewport }) => dontshowonsmallviewport ? 'background: none;' : ''}
   }
 `;
+
+Background.defaultProps = {
+  dontshowonsmallviewport: "false"
+};
 
 export const Container = styled.div`
   display: flex;
