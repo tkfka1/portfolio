@@ -1,4 +1,5 @@
 import { initializeApp } from "firebase/app";
+import { getAuth } from "firebase/auth";
 
 // 1) when seeding the database you'll have to uncomment this!
 // import { seedDatabase } from '../seed';
@@ -14,11 +15,12 @@ const config = {
 };
 
 const firebase = initializeApp(config);
+const auth = getAuth();
 // 2) when seeding the database you'll have to uncomment this!
 // seedDatabase(firebase);
 // 3) once you have populated the database (only run once!), re-comment this so you don't get duplicate data
 
-export { firebase };
+export { firebase, auth };
 
 
 // 기본 sdk 추가 코드 npm install firebase
