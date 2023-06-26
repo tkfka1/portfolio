@@ -51,7 +51,7 @@ Header.Search = function HeaderSearch({ searchTerm, setSearchTerm, ...restProps 
   return (
     <Search {...restProps}>
       <SearchIcon onClick={() => setSearchActive((searchActive) => !searchActive)} data-testid="search-click">
-        <img src="/images/icons/search.png" alt="Search" />
+        <img src={process.env.PUBLIC_URL + '/images/icons/search.png'} alt="Search" />
       </SearchIcon>
       <SearchInput
         value={searchTerm}
@@ -73,7 +73,7 @@ Header.Feature = function HeaderFeature({ children, ...restProps }) {
 };
 
 Header.Picture = function HeaderPicture({ src, ...restProps }) {
-  return <Picture {...restProps} src={`/images/users/${src}.png`} />;
+  return <Picture {...restProps} src={process.env.PUBLIC_URL +`/images/users/${src}.png`} />;
 };
 
 Header.Dropdown = function HeaderDropdown({ children, ...restProps }) {
@@ -85,6 +85,19 @@ Header.TextLink = function HeaderTextLink({ children, ...restProps }) {
 };
 
 Header.PlayButton = function HeaderPlayButton({ children, ...restProps }) {
+  return <PlayButton {...restProps}>{children}</PlayButton>;
+};
+
+Header.GithubButton = function HeaderGithubButton({ children, ...restProps }) {
+  return <PlayButton {...restProps}>{children}</PlayButton>;
+};
+Header.EmailButton = function HeaderEmailButton({ children, ...restProps }) {
+  return <PlayButton {...restProps}>{children}</PlayButton>;
+};
+Header.TistoryButton = function HeaderTistoryButton({ children, ...restProps }) {
+  return <PlayButton {...restProps}>{children}</PlayButton>;
+};
+Header.VelogButton = function HeaderVelogButton({ children, ...restProps }) {
   return <PlayButton {...restProps}>{children}</PlayButton>;
 };
 

@@ -9,6 +9,10 @@ import { FooterContainer } from './footer';
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
+import githubicon from '../icons/github.svg';
+import emailicon from '../icons/email.svg';
+import tistoryicon from '../icons/tistory.svg';
+import velogicon from '../icons/velog.svg';
 
 export function BrowseContainer({ slides }) {
   const [category, setCategory] = useState('series');
@@ -63,7 +67,7 @@ export function BrowseContainer({ slides }) {
         style={{
           backgroundColor: "#000",
           borderRadius: "10px",
-          padding: "10px",
+
         }}
       >
         <ul style={{ margin: "0px",color: "blue", }}> {dots} </ul>
@@ -136,16 +140,23 @@ export function BrowseContainer({ slides }) {
         </Header.Frame>
 
         <Header.Feature>
-          <Header.FeatureCallOut>안녕하세요 정한교입니다!</Header.FeatureCallOut>
+          <Header.FeatureCallOut>🙋"Hello hankyo world!"</Header.FeatureCallOut>
           <Header.Text>
-            Forever alone in a crowd, failed comedian Arthur Fleck seeks connection as he walks the streets of Gotham
-            City. Arthur wears two masks -- the one he paints for his day job as a clown, and the guise he projects in a
-            futile attempt to feel like he's part of the world around him.
+          다양한 기술을 적용하고 문제를 해결하는 것에 즐거움을 느끼는<br />
+          지속적인 성장과 학습을 추구하는 인프라 엔지니어이자 개발자입니다.
+          <h5>이 사이트는 저의 성장과정과 업무 경험을 공유하는 플랫폼입니다.</h5>
+          
           </Header.Text>
-          <Header.PlayButton>Play</Header.PlayButton>
+          <div>
+          <Header.GithubButton onClick={() => { window.open("https://github.com/tkfka1", "_blank"); }}><img src={githubicon}/><br />Github</Header.GithubButton>
+          <Header.EmailButton onClick={() => { window.open("mailto:tkfka0502@gmail.com", "_blank"); }}><img src={emailicon}/><br />Email</Header.EmailButton>
+          <Header.TistoryButton onClick={() => { window.open("https://trinityforce.tistory.com", "_blank"); }}><img src={tistoryicon}/><br />Tistory</Header.TistoryButton>
+          <Header.VelogButton onClick={() => { window.open("https://velog.io/@tkfka", "_blank"); }}><img src={velogicon}/><br />Velog</Header.VelogButton>
+          </div>
+
+          
         </Header.Feature>
       </Header>
-
       <Card.Group>
         {slideRows.map((slideItem) => (
           <Card key={`${category}-${slideItem.title.toLowerCase()}`}>
@@ -155,7 +166,7 @@ export function BrowseContainer({ slides }) {
             <Slider {...settings}>
               {slideItem.data.map((item) => (
                 <Card.Item key={item.docId} item={item}>
-                  <Card.Image src={`/images/${category}/${item.genre}/${item.slug}/small.jpg`} />
+                  <Card.Image src={process.env.PUBLIC_URL +`/images/${category}/${item.genre}/${item.slug}/small.jpg`} />
                   <Card.Meta>
                     <Card.SubTitle>{item.title}</Card.SubTitle>
                     <Card.Text>{item.description}</Card.Text>
@@ -186,7 +197,7 @@ export function BrowseContainer({ slides }) {
             <Card.Feature category={category}>
               <Player>
                 <Player.Button />
-                <Player.Video src="/videos/bunny.mp4" />
+                <Player.Video src={process.env.PUBLIC_URL +"/videos/bunny.mp4"} />
               </Player>
             </Card.Feature>
           </Card>

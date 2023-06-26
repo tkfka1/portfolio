@@ -5,7 +5,7 @@ export const Background = styled.div`
   display: flex;
   flex-direction: column;
 
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.35)), url(${({ src }) => (src ? `../images/misc/${src}.jpg` : '../images/misc/home-bg.jpg')}) top left / cover
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.35)), url(${({ src }) => (src ? process.env.PUBLIC_URL +`/images/misc/${src}.jpg` : process.env.PUBLIC_URL +'/images/misc/home-bg.jpg')}) top left / cover
     no-repeat;
 
   @media (max-width: 1100px) {
@@ -223,7 +223,7 @@ export const Logo = styled.img`
 
 export const PlayButton = styled.button`
   box-shadow: 0 0.6vw 1vw -0.4vw rgba(0, 0, 0, 0.35);
-  background-color: #e6e6e6;
+  background-color: #e0e0e0;
   color: #000;
   border-width: 0;
   padding: 10px 20px;
@@ -232,6 +232,7 @@ export const PlayButton = styled.button`
   font-weight: bold;
   font-size: 20px;
   margin-top: 10px;
+  margin-right: 10px;
   cursor: pointer;
   transition: background-color 0.5s ease;
 

@@ -4,7 +4,7 @@ import { Footer } from '../components';
 export function FooterContainer() {
   return (
     <Footer>
-      <Footer.Title>Questions? Contact us.</Footer.Title>
+      <Footer.Title>본 사이트는 Netflix 플랫폼의 디자인을 모티브로 개발한 포트폴리오 사이트입니다.<br />영리를 목적으로 하지 않으며 저작권을 준수합니다.</Footer.Title>
       <Footer.Break />
       <Footer.Row>
         <Footer.Column>

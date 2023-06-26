@@ -5,5 +5,5 @@ export function IsUserRedirect({ user, loggedInPath, children }) {
 }
 
 export function ProtectedRoute({ user, children }) {
-  return user ? children : <Navigate to="signin" />;
+  return user ? children : <Navigate to="/" />;
 }

@@ -21,7 +21,7 @@
     "styled-components": "^6.0.0-rc.3",
     "web-vitals": "^2.1.0"
   },
-  "homepage" : ".",
+  "homepage" : "https://tkfka1.github.io/portfolio",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
