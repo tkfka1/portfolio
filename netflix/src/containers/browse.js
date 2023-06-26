@@ -10,7 +10,6 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
 
-
 export function BrowseContainer({ slides }) {
   const [category, setCategory] = useState('series');
   const [profile, setProfile] = useState({});
