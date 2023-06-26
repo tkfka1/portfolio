@@ -12,11 +12,13 @@
     "react-scripts": "3.4.0",
     "styled-components": "^5.1.1"
   },
+  "homepage" : "https://tkfka1.github.io/portfolio",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --coverage --watchAll",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": "react-app"

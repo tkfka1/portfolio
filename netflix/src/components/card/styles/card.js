@@ -5,7 +5,6 @@ export const Title = styled.p`
   color: #e5e5e5;
   font-weight: bold;
   margin-left: 56px;
-  margin-right: 56px;
   margin-top: 0;
 `;
 
@@ -13,6 +12,7 @@ export const Container = styled.div`
   display: flex;
   flex-direction: column;
   margin-bottom: 50px;
+  
 
   > ${Title} {
     @media (max-width: 1000px) {
@@ -27,8 +27,8 @@ export const Container = styled.div`
 
 export const Group = styled.div`
   display: flex;
-  flex-direction: ${({ flexDirection }) => (flexDirection === 'row' ? 'row' : 'column')};
-  ${({ alignItems }) => alignItems && `align-items: ${alignItems}`};
+  flex-direction: ${({ flexdirection }) => (flexdirection === 'row' ? 'row' : 'column')};
+  ${({ alignitems }) => alignitems && `align-items: ${alignitems}`};
   ${({ margin }) => margin && `margin: ${margin}`};
 
   > ${Container}:first-of-type {
@@ -59,35 +59,42 @@ export const Text = styled.p`
 `;
 
 export const Entities = styled.div`
-  display: flex;
-  flex-direction: row;
+  // display: flex;
+  // flex-direction: row;
+  margin-bottom: 20px;
+    
 `;
 
 export const Meta = styled.div`
   display: none;
   position: absolute;
   bottom: 0;
-  padding: 10px;
+  left: 0;
+  padding: 50px;
+
   background-color: #0000008f;
 `;
 
 export const Image = styled.img`
   border: 0;
-  width: 100%;
-  max-width: 305px;
+  width: 98%;
   cursor: pointer;
   height: auto;
   padding: 0;
   margin: 0;
+  
 `;
 
 export const Item = styled.div`
   display: flex;
+  
   flex-direction: column;
-  margin-right: 5px;
+  width: 100%;
+  margin-right: 50px;
   position: relative;
   cursor: pointer;
   transition: transform 0.2s;
+
 
   &:hover {
     transform: scale(1.3);
@@ -101,13 +108,13 @@ export const Item = styled.div`
     }
   }
 
-  &:first-of-type {
-    margin-left: 56px;
+  // &:first-of-type {
+  //   margin-left: 56px;
 
-    @media (max-width: 1000px) {
-      margin-left: 30px;
-    }
-  }
+  //   @media (max-width: 1000px) {
+  //     margin-left: 30px;
+  //   }
+  // }
 
   &:last-of-type {
     margin-right: 56px;

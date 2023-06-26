@@ -6,6 +6,10 @@ import logo from '../logo.svg';
 import { FirebaseContext } from '../context/firebase';
 import { SelectProfileContainer } from './profiles';
 import { FooterContainer } from './footer';
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css"; 
+import "slick-carousel/slick/slick-theme.css";
+
 
 export function BrowseContainer({ slides }) {
   const [category, setCategory] = useState('series');
@@ -16,6 +20,67 @@ export function BrowseContainer({ slides }) {
 
   const { auth } = useContext(FirebaseContext);
   const user = auth.currentUser || {};
+
+  const settings = {
+    className: "center",
+    focusOnSelect: true,
+    centerMode: true,
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 3, // 한 번에 보여줄 슬라이드 수를 설정
+    slidesToScroll: 1, // 한 번 스크롤시 이동할 슬라이드 수를 설정
+    draggable: true, // 드래그 가능 여부 설정
+    arrows: false,
+    initialSlide: 0,
+    responsive: [
+      {
+        breakpoint: 1200, // screen width >= 1024px
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 1,
+          infinite: true,
+          dots: true
+        }
+      },
+      {
+        breakpoint: 800, // screen width >= 600px
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+          initialSlide: 2
+        }
+      },
+      {
+        breakpoint: 600, // screen width >= 480px
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1
+        }
+      }
+    ],
+    appendDots: dots => (
+      <div
+        style={{
+          backgroundColor: "#000",
+          borderRadius: "10px",
+          padding: "10px",
+        }}
+      >
+        <ul style={{ margin: "0px",color: "blue", }}> {dots} </ul>
+      </div>
+    ),
+    customPaging: i => (
+      <div
+        style={{
+          width: "30px",
+          color: "white",
+        }}
+      >
+        {i + 1}
+      </div>
+    ),
+  };
 
   useEffect(() => {
     setTimeout(() => {
@@ -36,20 +101,21 @@ export function BrowseContainer({ slides }) {
     } else {
       setSlideRows(slides[category]);
     }
-  }, [searchTerm]);
+  }, [searchTerm, slides, category]);
 
+  const dontShowOnSmallViewPort = true;
   return profile.displayName ? (
     <>
       {loading ? <Loading src={user.photoURL} /> : <Loading.ReleaseBody />}
 
-      <Header src="joker1" dontshowonsmallviewport>
+      <Header src="cloud" dontshowonsmallviewport={dontShowOnSmallViewPort.toString()}>
         <Header.Frame>
           <Header.Group>
             <Header.Logo to={ROUTES.HOME} src={logo} alt="Netflix" />
-            <Header.TextLink active={category === 'series' ? 'true' : 'false'} onClick={() => setCategory('series')}>
+            <Header.TextLink $activeLink={category === 'series' ? 'true' : 'false'} onClick={() => setCategory('series')}>
               Series
             </Header.TextLink>
-            <Header.TextLink active={category === 'films' ? 'true' : 'false'} onClick={() => setCategory('films')}>
+            <Header.TextLink $activeLink={category === 'films' ? 'true' : 'false'} onClick={() => setCategory('films')}>
               Films
             </Header.TextLink>
           </Header.Group>
@@ -71,7 +137,7 @@ export function BrowseContainer({ slides }) {
         </Header.Frame>
 
         <Header.Feature>
-          <Header.FeatureCallOut>Watch Joker Now</Header.FeatureCallOut>
+          <Header.FeatureCallOut>안녕하세요 정한교입니다!</Header.FeatureCallOut>
           <Header.Text>
             Forever alone in a crowd, failed comedian Arthur Fleck seeks connection as he walks the streets of Gotham
             City. Arthur wears two masks -- the one he paints for his day job as a clown, and the guise he projects in a
@@ -85,7 +151,9 @@ export function BrowseContainer({ slides }) {
         {slideRows.map((slideItem) => (
           <Card key={`${category}-${slideItem.title.toLowerCase()}`}>
             <Card.Title>{slideItem.title}</Card.Title>
+            
             <Card.Entities>
+            <Slider {...settings}>
               {slideItem.data.map((item) => (
                 <Card.Item key={item.docId} item={item}>
                   <Card.Image src={`/images/${category}/${item.genre}/${item.slug}/small.jpg`} />
@@ -95,7 +163,27 @@ export function BrowseContainer({ slides }) {
                   </Card.Meta>
                 </Card.Item>
               ))}
+              </Slider>
             </Card.Entities>
+
+            
+            {/* <Entities>
+            
+            {slideItem.data.map((item) => (
+              <Slide key={item.docId}>
+                <Card.Item item={item}>
+                  <Card.Image src={`/images/${category}/${item.genre}/${item.slug}/small.jpg`} />
+                  <Card.Meta>
+                    <Card.SubTitle>{item.title}</Card.SubTitle>
+                    <Card.Text>{item.description}</Card.Text>
+                  </Card.Meta>
+                </Card.Item>
+              </Slide>
+            ))}
+            
+          </Entities> */}
+          
+          
             <Card.Feature category={category}>
               <Player>
                 <Player.Button />
