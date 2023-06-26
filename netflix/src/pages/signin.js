@@ -7,6 +7,7 @@ import { FooterContainer } from '../containers/footer';
 import * as ROUTES from '../constants/routes';
 import { signInWithEmailAndPassword } from 'firebase/auth';
 
+
 export default function SignIn() {
   const navigate = useNavigate();
   const { auth } = useContext(FirebaseContext);
@@ -16,6 +17,21 @@ export default function SignIn() {
   const [error, setError] = useState('');
 
   const isInvalid = password === '' || emailAddress === '';
+
+  const handleGuestSignin = async (event) => {
+    event.preventDefault();
+
+    const gemail = 'test@test.com';  // 게스트 계정 이메일
+    const gpassword = '123456';     // 게스트 계정 비밀번호
+
+    try {
+      await signInWithEmailAndPassword(auth, gemail, gpassword);
+      // 로그인 성공
+    } catch (error) {
+      setError(error.message);
+      // 에러 처리
+    }
+  };
 
   const handleSignin = (event) => {
     event.preventDefault();
@@ -61,6 +77,14 @@ export default function SignIn() {
           <Form.TextSmall>
             This page is protected by Google reCAPTCHA to ensure you're not a bot. Learn more.
           </Form.TextSmall>
+          <Form.Text>
+            Guest account <br />
+            Email: test@test.com <br />
+            Passwd: 123456
+          </Form.Text>
+          <Form.Submit onClick={handleGuestSignin}>
+              Guest Account Sign In
+            </Form.Submit>
         </Form>
       </HeaderContainer>
       <FooterContainer />

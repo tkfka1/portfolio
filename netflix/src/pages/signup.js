@@ -73,6 +73,9 @@ export default function SignUp() {
           <Form.TextSmall>
             This page is protected by Google reCAPTCHA to ensure you're not a bot. Learn more.
           </Form.TextSmall>
+          <Form.Text>
+          이메일 인증은 따로 없으며, 데이터베이스의 보안을 고려하지 않았기에 실제 이메일을 사용해서 만들지 않도록 주의하십시오.
+          </Form.Text>
         </Form>
       </HeaderContainer>
       <FooterContainer />

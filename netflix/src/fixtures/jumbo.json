@@ -1,25 +1,25 @@
 [
   {
     "id": 1,
-    "title": "Enjoy on your TV.",
-    "subTitle": "Watch on smart TVs, PlayStation, Xbox, Chromecast, Apple TV, Blu-ray players and more.",
-    "image": "/images/misc/home-tv.jpg",
+    "title": "지속적 학습",
+    "subTitle": "IT 분야의 끊임없는 학습자로, 학습 과정이 결과만큼 중요하다는 신념으로, 역량 향상과 혁신을 추구합니다.",
+    "image": "/images/misc/home-study.png",
     "alt": "Tiger King on Netflix",
     "direction": "row"
   },
   {
     "id": 2,
-    "title": "Download your programmes to watch on the go.",
-    "subTitle": "Save your data and watch all your favourites offline.",
-    "image": "/images/misc/home-mobile.jpg",
+    "title": "기술적 도전",
+    "subTitle": "최신 기술과 산업 트렌드를 지속적으로 파악하며, 복잡한 시스템을 깊이 이해하고 새로운 도구를 활용합니다.",
+    "image": "/images/misc/home-tech.png",
     "alt": "Watch on mobile",
     "direction": "row-reverse"
   },
   {
     "id": 3,
-    "title": "Watch everywhere.",
-    "subTitle": "Stream unlimited films and TV programmes on your phone, tablet, laptop and TV without paying more.",
-    "image": "/images/misc/home-imac.jpg",
+    "title": "커뮤니케이션",
+    "subTitle": "상호 이해와 존중을 바탕으로 명확하고 친절한 커뮤니케이션을 중시합니다. 모든 사람의 의견을 귀 기울여 듣고, 복잡한 기술적 이슈를 이해하기 쉽게 전달하려 노력합니다.",
+    "image": "/images/misc/home-cumu.png",
     "alt": "Money Heist on Netflix",
     "direction": "row"
   }

@@ -1,6 +1,8 @@
 import React from 'react';
 import { Accordion, OptForm } from '../components';
 import faqsData from '../fixtures/faqs';
+import { Link } from 'react-router-dom';
+import * as ROUTES from '../constants/routes';
 
 export function FaqsContainer() {
   return (
@@ -17,9 +19,11 @@ export function FaqsContainer() {
 
       <OptForm>
         <OptForm.Input placeholder="Email address" />
-        <OptForm.Button>Try it now</OptForm.Button>
+        <Link to={ROUTES.SIGN_IN} style={{ textDecoration: 'none' }}>
+            <OptForm.Button>Try it now</OptForm.Button>
+            </Link>
         <OptForm.Break />
-        <OptForm.Text>Ready to watch? Enter your email to create or restart your membership.</OptForm.Text>
+        <OptForm.Text>Thank you for visiting my portfolio website!</OptForm.Text>
       </OptForm>
     </Accordion>
   );

@@ -1,27 +1,18 @@
 [
   {
     "id": 1,
-    "header": "What is Netflix?",
-    "body": "Netflix is a streaming service that offers a wide variety of award-winning TV programmes, films, anime, documentaries and more – on thousands of internet-connected devices.\n\nYou can watch as much as you want, whenever you want, without a single advert – all for one low monthly price. There's always something new to discover, and new TV programmes and films are added every week!"
+    "header": "이 사이트를 사용하는 방법은?",
+    "body": " Try it now 버튼 혹은 오른쪽 상단의 Sign in 버튼을 클릭하신 후 회원가입 을 하시고 로그인을 하시거나 테스트계정으로 로그인 하시면됩니다. \n\n 이메일 인증은 따로 없는데다가, 데이터베이스의 보안을 고려하지 않았기에 실제 사용하는 계정을 사용해서 만들지 않도록 주의해 주세요."
   },
   {
     "id": 2,
-    "header": "How much does Netflix cost?",
-    "body": "Watch Netflix on your smartphone, tablet, smart TV, laptop or streaming device, all for one low fixed monthly fee. Plans start from £5.99 a month. No extra costs or contracts."
+    "header": "개인적으로 연락할 수단을 알고싶습니다.",
+    "body": "이메일로 연락해주시면 빠른시일내에 답변을 드리겠습니다. \n\n tkfka0502@gmail.com"
   },
   {
     "id": 3,
-    "header": "Where can I watch?",
-    "body": "Watch anywhere, anytime, on an unlimited number of devices. Sign in with your Netflix account to watch instantly on the web at netflix.com from your personal computer or on any internet-connected device that offers the Netflix app, including smart TVs, smartphones, tablets, streaming media players and game consoles.\n\nYou can also download your favourite programmes with the iOS, Android, or Windows 10 app. Use downloads to watch while you're on the go and without an internet connection. Take Netflix with you anywhere."
-  },
-  {
-    "id": 4,
-    "header": "How do I cancel?",
-    "body": "Netflix is flexible. There are no annoying contracts and no commitments. You can easily cancel your account online in two clicks. There are no cancellation fees – start or stop your account at any time."
-  },
-  {
-    "id": 5,
-    "header": "What can I watch on Netflix?",
-    "body": "Netflix has an extensive library of feature films, documentaries, TV programmes, anime, award-winning Netflix originals, and more. Watch as much as you want, any time you want."
+    "header": "이 사이트의 소스를 사용해도 되나요?",
+    "body": "네 따로 라이센스가 없으므로 이 사이트의 소스 코드를 마음껏 사용할 수 있습니다. 대신, 구현에 참고한 소스는 https://github.com/karlhadwen/netflix 이고 이 소스를 React 18.2.0 로 포팅 및 변형을 거쳐서 제작하였습니다. 참고 소스는 MIT License를 따르고 있습니다.\n\nMIT License는 자유롭게 수정 가능하며, 상업적 활용(판매)도 가능한 라이선스입니다. 추가적으로 MIT License는 사용 시 사용권, 저작권, 라이선스 고지를 하여야 합니다."
   }
+
 ]

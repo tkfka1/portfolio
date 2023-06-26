@@ -38,6 +38,24 @@ export function BrowseContainer({ slides }) {
     initialSlide: 0,
     responsive: [
       {
+        breakpoint: 3000, // screen width >= 1024px
+        settings: {
+          slidesToShow: 5,
+          slidesToScroll: 1,
+          infinite: true,
+          dots: true
+        }
+      },
+      {
+        breakpoint: 2000, // screen width >= 1024px
+        settings: {
+          slidesToShow: 4,
+          slidesToScroll: 1,
+          infinite: true,
+          dots: true
+        }
+      },
+      {
         breakpoint: 1200, // screen width >= 1024px
         settings: {
           slidesToShow: 3,
@@ -143,8 +161,8 @@ export function BrowseContainer({ slides }) {
           <Header.FeatureCallOut>🙋"Hello hankyo world!"</Header.FeatureCallOut>
           <Header.Text>
           다양한 기술을 적용하고 문제를 해결하는 것에 즐거움을 느끼는<br />
-          지속적인 성장과 학습을 추구하는 인프라 엔지니어이자 개발자입니다.
-          <h5>이 사이트는 저의 성장과정과 업무 경험을 공유하는 플랫폼입니다.</h5>
+          지속적인 성장과 학습을 추구하는 <b>인프라 엔지니어, 개발자</b>입니다.<br /><br />
+          이 사이트는 저의 성장과정과 업무 경험을 공유하는 플랫폼입니다.
           
           </Header.Text>
           <div>
