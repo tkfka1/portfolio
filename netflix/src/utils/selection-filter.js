@@ -1,11 +1,10 @@
-export default function selectionFilter({ series, films } = []) {
+export default function selectionFilter({ portfolio, films } = []) {
   return {
-    series: [
-      { title: 'Documentaries', data: series?.filter((item) => item.genre === 'documentaries') },
-      { title: 'Comedies', data: series?.filter((item) => item.genre === 'comedies') },
-      { title: 'Children', data: series?.filter((item) => item.genre === 'children') },
-      { title: 'Crime', data: series?.filter((item) => item.genre === 'crime') },
-      { title: 'Feel Good', data: series?.filter((item) => item.genre === 'feel-good') },
+    portfolio: [
+      { title: 'Project', data: portfolio?.filter((item) => item.genre === 'project') },
+      { title: 'Education', data: portfolio?.filter((item) => item.genre === 'education') },
+      { title: 'Career', data: portfolio?.filter((item) => item.genre === 'career') },
+      { title: 'Certifications', data: portfolio?.filter((item) => item.genre === 'certifications') },
     ],
     films: [
       { title: 'Drama', data: films?.filter((item) => item.genre === 'drama') },

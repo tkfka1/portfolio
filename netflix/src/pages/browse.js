@@ -4,9 +4,9 @@ import { useContent } from '../hooks';
 import { selectionFilter } from '../utils';
 
 export default function Browse() {
-  const { series } = useContent('series');
+  const { portfolio } = useContent('portfolio');
   const { films } = useContent('films');
-  const slides = selectionFilter({ series, films });
+  const slides = selectionFilter({ portfolio, films });
 
   return <BrowseContainer slides={slides} />;
 }

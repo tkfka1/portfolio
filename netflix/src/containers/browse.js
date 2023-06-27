@@ -15,7 +15,7 @@ import tistoryicon from '../icons/tistory.svg';
 import velogicon from '../icons/velog.svg';
 
 export function BrowseContainer({ slides }) {
-  const [category, setCategory] = useState('series');
+  const [category, setCategory] = useState('portfolio');
   const [profile, setProfile] = useState({});
   const [loading, setLoading] = useState(true);
   const [searchTerm, setSearchTerm] = useState('');
@@ -133,11 +133,11 @@ export function BrowseContainer({ slides }) {
         <Header.Frame>
           <Header.Group>
             <Header.Logo to={ROUTES.HOME} src={logo} alt="Netflix" />
-            <Header.TextLink $activeLink={category === 'series' ? 'true' : 'false'} onClick={() => setCategory('series')}>
-              Series
+            <Header.TextLink $activeLink={category === 'portfolio' ? 'true' : 'false'} onClick={() => setCategory('portfolio')}>
+              Portfolio
             </Header.TextLink>
             <Header.TextLink $activeLink={category === 'films' ? 'true' : 'false'} onClick={() => setCategory('films')}>
-              Films
+              Skills
             </Header.TextLink>
           </Header.Group>
           <Header.Group>

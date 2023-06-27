@@ -1,1 +1,4 @@
 node_modules
+netflix/.env
+make_db/.venv
+make_db/firebase-adminsdk.json
