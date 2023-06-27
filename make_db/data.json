@@ -1,32 +1,33 @@
 {
-    "test": [
+    "portfolio": [
         {
             "id": "",
-            "title": "The Social Network",
-            "description": "Mark Zuckerberg creates a social networking site, Facebook, with the help of his friend Eduardo Saverin. But soon, a string of lies tears their relationship apart even as Facebook connects people.",
-            "genre": "drama",
+            "title": "정보처리기사",
+            "description": "정보처리 기사",
+            "genre": "certifications",
             "maturity": "12",
-            "slug": "the-social-network"
+            "slug": "amanda-knox"
         },
         {
-            "document_id":"",
             "id": "",
-            "title": "The Social Network",
-            "description": "Mark Zuckerberg creates a social networking site, Facebook, with the help of his friend Eduardo Saverin. But soon, a string of lies tears their relationship apart even as Facebook connects people.",
-            "genre": "drama",
+            "title": "OA자격증",
+            "description": "컴퓨터활용능력 1급, 사무자동화산업기사",
+            "genre": "certifications",
             "maturity": "12",
-            "slug": "the-social-network"
+            "slug": "amanda-knox"
+        },
+        {
+            "id": "",
+            "title": "구름대학수강신청",
+            "description": "가상의 대학 구름대학에서의 수강신청서비스.",
+            "genre": "project",
+            "maturity": "12",
+            "slug": "amanda-knox"
         }
     ],
-    "test2": [
+    "skills": [
         {
-            "document_id":"",
-            "id": "",
-            "title": "The Social Network",
-            "description": "Mark Zuckerberg creates a social networking site, Facebook, with the help of his friend Eduardo Saverin. But soon, a string of lies tears their relationship apart even as Facebook connects people.",
-            "genre": "drama",
-            "maturity": "12",
-            "slug": "the-social-network"
+
         }
     ]
 }

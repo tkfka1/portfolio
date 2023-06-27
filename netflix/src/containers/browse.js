@@ -166,10 +166,10 @@ export function BrowseContainer({ slides }) {
           
           </Header.Text>
           <div>
-          <Header.GithubButton onClick={() => { window.open("https://github.com/tkfka1", "_blank"); }}><img src={githubicon}/><br />Github</Header.GithubButton>
-          <Header.EmailButton onClick={() => { window.open("mailto:tkfka0502@gmail.com", "_blank"); }}><img src={emailicon}/><br />Email</Header.EmailButton>
-          <Header.TistoryButton onClick={() => { window.open("https://trinityforce.tistory.com", "_blank"); }}><img src={tistoryicon}/><br />Tistory</Header.TistoryButton>
-          <Header.VelogButton onClick={() => { window.open("https://velog.io/@tkfka", "_blank"); }}><img src={velogicon}/><br />Velog</Header.VelogButton>
+          <Header.GithubButton onClick={() => { window.open("https://github.com/tkfka1", "_blank"); }}><img src={githubicon} alt="" /><br />Github</Header.GithubButton>
+          <Header.EmailButton onClick={() => { window.open("mailto:tkfka0502@gmail.com", "_blank"); }}><img src={emailicon} alt="" /><br />Email</Header.EmailButton>
+          <Header.TistoryButton onClick={() => { window.open("https://trinityforce.tistory.com", "_blank"); }}><img src={tistoryicon} alt="" /><br />Tistory</Header.TistoryButton>
+          <Header.VelogButton onClick={() => { window.open("https://velog.io/@tkfka", "_blank"); }}><img src={velogicon} alt="" /><br />Velog</Header.VelogButton>
           </div>
 
           
