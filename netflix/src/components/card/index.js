@@ -10,6 +10,7 @@ import {
   FeatureTitle,
   FeatureText,
   FeatureClose,
+  FeatureButton,
   Maturity,
   Content,
   Meta,
@@ -86,6 +87,7 @@ Card.Feature = function CardFeature({ children, category, ...restProps }) {
         <FeatureClose onClick={() => setShowFeature(false)}>
           <img src={process.env.PUBLIC_URL+'/images/icons/close.png'} alt="Close" />
         </FeatureClose>
+        
 
         <Group margin="30px 0" flexdirection="row" alignitems="center">
           <Maturity rating={itemFeature.maturity}>{itemFeature.maturity < 12 ? 'PG' : itemFeature.maturity}</Maturity>
@@ -93,6 +95,7 @@ Card.Feature = function CardFeature({ children, category, ...restProps }) {
             {itemFeature.genre.charAt(0).toUpperCase() + itemFeature.genre.slice(1)}
           </FeatureText>
         </Group>
+        <FeatureButton onClick={() => window.open(itemFeature.url, "_blank")}>자세히</FeatureButton>
 
         {children}
       </Content>

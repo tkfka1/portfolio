@@ -89,7 +89,7 @@ def config_read():
 
 def json_generator():
     global data_file_path
-    with open(data_file_path, 'r') as f:
+    with open(data_file_path, 'r',encoding='UTF8') as f:
         print(f"성공적으로 {data_file_path} 을 가져왔습니다.")
         return json.load(f)
 

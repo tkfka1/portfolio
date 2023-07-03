@@ -40,7 +40,7 @@ export function BrowseContainer({ slides }) {
       {
         breakpoint: 3000, // screen width >= 1024px
         settings: {
-          slidesToShow: 5,
+          slidesToShow: 3,
           slidesToScroll: 1,
           infinite: true,
           dots: true
@@ -49,7 +49,7 @@ export function BrowseContainer({ slides }) {
       {
         breakpoint: 2000, // screen width >= 1024px
         settings: {
-          slidesToShow: 4,
+          slidesToShow: 3,
           slidesToScroll: 1,
           infinite: true,
           dots: true
@@ -214,8 +214,8 @@ export function BrowseContainer({ slides }) {
           
             <Card.Feature category={category}>
               <Player>
-                <Player.Button />
-                <Player.Video src={process.env.PUBLIC_URL +"/videos/bunny.mp4"} />
+                {/* <Player.Button />
+                <Player.Video src={process.env.PUBLIC_URL +"/videos/bunny.mp4"} /> */}
               </Player>
             </Card.Feature>
           </Card>
