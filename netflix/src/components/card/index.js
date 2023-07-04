@@ -11,6 +11,7 @@ import {
   FeatureText,
   FeatureClose,
   FeatureButton,
+  FeatureLanguage,
   Maturity,
   Content,
   Meta,
@@ -90,10 +91,14 @@ Card.Feature = function CardFeature({ children, category, ...restProps }) {
         
 
         <Group margin="30px 0" flexdirection="row" alignitems="center">
-          <Maturity rating={itemFeature.maturity}>{itemFeature.maturity < 12 ? 'PG' : itemFeature.maturity}</Maturity>
+          {/* <Maturity rating={itemFeature.maturity}>{itemFeature.maturity < 12 ? 'PG' : itemFeature.maturity}</Maturity>
           <FeatureText fontWeight="bold">
             {itemFeature.genre.charAt(0).toUpperCase() + itemFeature.genre.slice(1)}
-          </FeatureText>
+          </FeatureText> */}
+          {itemFeature.skill?.map((skills, index) => (
+    <FeatureLanguage key={index}>{skills}</FeatureLanguage>
+))}
+
         </Group>
         <FeatureButton onClick={() => window.open(itemFeature.url, "_blank")}>자세히</FeatureButton>
 

@@ -227,3 +227,20 @@ export const Maturity = styled.div`
   margin-right: 10px;
   font-size: 12px;
 `;
+
+export const FeatureLanguage = styled.div `
+  display: inline-block;
+  padding: 0.2em 0.6em;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #fff;
+  background-color: #007bff;
+  border-radius: 0.16rem;
+  text-transform: uppercase;
+  margin: 0.4rem 0.4rem 0.4rem 0;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+  &:hover {
+    background-color: #0056b3;
+  }
+`;
