@@ -136,7 +136,7 @@ export function BrowseContainer({ slides }) {
             <Header.TextLink $activeLink={category === 'portfolio' ? 'true' : 'false'} onClick={() => setCategory('portfolio')}>
               Portfolio
             </Header.TextLink>
-            <Header.TextLink $activeLink={category === 'films' ? 'true' : 'false'} onClick={() => setCategory('films')}>
+            <Header.TextLink $activeLink={category === 'skills' ? 'true' : 'false'} onClick={() => setCategory('skills')}>
               Skills
             </Header.TextLink>
           </Header.Group>
