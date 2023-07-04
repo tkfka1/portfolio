@@ -26,9 +26,8 @@ db = firestore.client()
 # data = ref.get()
 # print(data)
 
-
 ## firestore
-ref = db.collection()
+ref = db.collection('portfolio')
 docs = ref.stream()
 
 ## 출력하기
@@ -38,10 +37,12 @@ docs = ref.stream()
 # Firestore 문서 데이터를 리스트로 변환
 doc_list = [doc.to_dict() for doc in docs]
 print(doc_list)
+
 # JSON 문자열로 변환
 json_data = json.dumps(doc_list)
 # print(json_data)
 ## json make
+
 with open('get_data.json', 'w') as f:
     f.write(json_data)
 

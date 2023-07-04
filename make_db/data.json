@@ -2,35 +2,11 @@
     "portfolio": [
         {
             "id": "",
-            "title": "AWS re/Start",
-            "description": "정보처리 기사",
-            "genre": "education",
+            "title": "PCCP",
+            "description": "PCCP (Programmers Certified Coding Professional) Lv.3  (주)그렙이 주관하는 '코딩역량인증시험'자격을 취득하였음을 인증합니다. LV3 는 프로그래밍 언어로 중상 수준의 문제를 정확히 해결할 수 있으며, 적절한 알고리즘을 설계하여 다양한 과제를 해결할 수 있습니다.",
+            "genre": "certifications",
             "maturity": "12",
-            "slug": "amanda-knox"
-        },
-        {
-            "id": "",
-            "title": "구름 쿠버네티스 양성과정",
-            "description": "컴퓨터활용능력 1급, 사무자동화산업기사",
-            "genre": "education",
-            "maturity": "12",
-            "slug": "amanda-knox"
-        },
-        {
-            "id": "",
-            "title": "응용 SW 개발자 양성과정",
-            "description": "가상의 대학 구름대학에서의 수강신청서비스.",
-            "genre": "education",
-            "maturity": "12",
-            "slug": "amanda-knox"
-        },
-        {
-            "id": "",
-            "title": "코딩테스트 실력 UP 패키지 with Python 11회차",
-            "description": "가상의 대학 구름대학에서의 수강신청서비스.",
-            "genre": "education",
-            "maturity": "12",
-            "slug": "amanda-knox"
+            "slug": "pro-pccp"
         }
     ],
     "skills": [

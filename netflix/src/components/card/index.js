@@ -100,8 +100,9 @@ Card.Feature = function CardFeature({ children, category, ...restProps }) {
 ))}
 
         </Group>
-        <FeatureButton onClick={() => window.open(itemFeature.url, "_blank")}>자세히</FeatureButton>
-
+        {itemFeature.url && (
+  <FeatureButton onClick={() => window.open(itemFeature.url, "_blank")}>자세히</FeatureButton>
+)}
         {children}
       </Content>
     </Feature>
